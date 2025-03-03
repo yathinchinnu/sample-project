@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cardiac Arrest Prediction</title>
+</head>
+<body>
+    <h1>Cardiac Arrest Prediction</h1>
+    <form method="POST" action="/prediction.html" autocomplete="on">
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age"><br><br>
+
+        <label for="gender">Gender (0: Female, 1: Male):</label><br>
+        <input type="number" id="gender" name="gender"><br><br>
+
+        <label for="smoking">Smoking (0: No, 1: Yes):</label><br>
+        <input type="number" id="smoking" name="smoking"><br><br>
+
+        <label for="hypertension">Hypertension (0: No, 1: Yes):</label><br>
+        <input type="number" id="hypertension" name="hypertension"><br><br>
+
+        <label for="stroke">Stroke (0: No, 1: Yes):</label><br>
+        <input type="number" id="stroke" name="stroke"><br><br>
+
+        <label for="ap_hi">Systolic Blood Pressure:</label><br>
+        <input type="number" id="ap_hi" name="ap_hi"><br><br>
+
+        <label for="ap_lo">Diastolic Blood Pressure:</label><br>
+        <input type="number" id="ap_lo" name="ap_lo"><br><br>
+
+        <label for="bmi">BMI:</label><br>
+        <input type="number" id="bmi" name="bmi"><br><br>
+
+        <label for="hr">Heart Rate:</label><br>
+        <input type="number" id="hr" name="hr"><br><br>
+
+        <label for="glucose">Glucose:</label><br>
+        <input type="number" id="glucose" name="glucose"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
