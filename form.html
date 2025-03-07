@@ -2,41 +2,95 @@
 <html>
 <head>
     <title>Cardiac Arrest Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #e0e0e0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 350px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #808080;
+            color: white;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        .btn-submit {
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn-submit:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
-    <h1>Cardiac Arrest Prediction</h1>
-    <form method="POST" action="/prediction.html" autocomplete="on">
-        <label for="age">Age:</label><br>
-        <input type="number" id="age" name="age"><br><br>
+    <div class="form-container">
+        <h2>Cardiac Arrest Prediction</h2>
+        <form method="POST" action="/prediction.html" autocomplete="on">
+            <label>Age:</label>
+            <input type="number" name="age" step="any" required>
 
-        <label for="gender">Gender (0: Female, 1: Male):</label><br>
-        <input type="number" id="gender" name="gender"><br><br>
+            <label>Gender (0 = Female, 1 = Male):</label>
+            <input type="number" name="gender" required>
 
-        <label for="smoking">Smoking (0: No, 1: Yes):</label><br>
-        <input type="number" id="smoking" name="smoking"><br><br>
+            <label>Smoking (0 = No, 1 = Yes):</label>
+            <input type="number" name="smoking" required>
 
-        <label for="hypertension">Hypertension (0: No, 1: Yes):</label><br>
-        <input type="number" id="hypertension" name="hypertension"><br><br>
+            <label>Hypertension (0 = No, 1 = Yes):</label>
+            <input type="number" name="hypertension" required>
 
-        <label for="stroke">Stroke (0: No, 1: Yes):</label><br>
-        <input type="number" id="stroke" name="stroke"><br><br>
+            <label>Stroke (0 = No, 1 = Yes):</label>
+            <input type="number" name="stroke" required>
 
-        <label for="ap_hi">Systolic Blood Pressure:</label><br>
-        <input type="number" id="ap_hi" name="ap_hi"><br><br>
+            <label>Systolic Blood Pressure (mmHg):</label>
+            <input type="number" name="ap_hi" step="any" required>
 
-        <label for="ap_lo">Diastolic Blood Pressure:</label><br>
-        <input type="number" id="ap_lo" name="ap_lo"><br><br>
+            <label>Diastolic Blood Pressure (mmHg):</label>
+            <input type="number" name="ap_lo" step="any" required>
 
-        <label for="bmi">BMI:</label><br>
-        <input type="number" id="bmi" name="bmi"><br><br>
+            <label>Body Mass Index (kg/m²):</label>
+            <input type="number" name="bmi" step="any" required>
 
-        <label for="hr">Heart Rate:</label><br>
-        <input type="number" id="hr" name="hr"><br><br>
+            <label>Heart Rate (bpm):</label>
+            <input type="number" name="hr" step="any" required>
 
-        <label for="glucose">Glucose:</label><br>
-        <input type="number" id="glucose" name="glucose"><br><br>
+            <label>Glucose (mg/dL):</label>
+            <input type="number" name="glucose" step="any" required>
 
-        <input type="submit" value="Predict">
-    </form>
+            <button type="submit" class="btn-submit">Predict</button>
+        </form>
+    </div>
 </body>
 </html>
